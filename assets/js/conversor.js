@@ -17,20 +17,54 @@ fetch(url+coins)
       const valorMaximo = document.getElementById('maxvalue');
       const valorMinimo = document.getElementById('minvalue');
 
+
+    //   moedaEstrangeira.addEventListener("click", function(){
+    //     if(moedaEstrangeira = '#dolar'){
+    //         let estaData = new Date(dolarReal.create_date)
+    //                 document.getElementById('title').innerHTML = dolarReal.name 
+    //                 document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
+                            
+    //                 valorMaximo.innerHTML= parseFloat(dolarReal.high).toLocaleString('pt-br',{
+    //                 style: 'currency',
+    //                 currency: 'BRL'
+    //                 })
+            
+    //                 valorMinimo.innerHTML = parseFloat(dolarReal.low).toLocaleString('pt-br', {
+    //                 style:'currency',
+    //                 currency: 'BRL'
+    //                 })
+    //   }else if(moedaEstrangeira = '#euro'){
+    //         let estaData = new Date(euroReal.create_date)
+    //                 document.getElementById('title').innerHTML = euroReal.name 
+    //                 document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
+                            
+    //                 valorMaximo.innerHTML= parseFloat(euroReal.high).toLocaleString('pt-br',{
+    //                 style: 'currency',
+    //                 currency: 'BRL'
+    //                 })
+            
+    //                 valorMinimo.innerHTML = parseFloat(euroReal.low).toLocaleString('pt-br', {
+    //                 style:'currency',
+    //                 currency: 'BRL'
+    //                 })
+    //   }
+    // })
+      
+
      
-        // let estaData = new Date(dolarReal.create_date)
-        // document.getElementById('title').innerHTML = dolarReal.name 
-        // document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
+        let estaData = new Date(dolarReal.create_date)
+        document.getElementById('title').innerHTML = dolarReal.name 
+        document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
                    
-        // valorMaximo.innerHTML= parseFloat(dolarReal.high).toLocaleString('pt-br',{
-        //   style: 'currency',
-        //   currency: 'BRL'
-        // })
+        valorMaximo.innerHTML= parseFloat(dolarReal.high).toLocaleString('pt-br',{
+          style: 'currency',
+          currency: 'BRL'
+        })
   
-        // valorMinimo.innerHTML = parseFloat(dolarReal.low).toLocaleString('pt-br', {
-        //   style:'currency',
-        //   currency: 'BRL'
-        // })
+        valorMinimo.innerHTML = parseFloat(dolarReal.low).toLocaleString('pt-br', {
+          style:'currency',
+          currency: 'BRL'
+        })
 
         // let estaData = new Date(euroReal.create_date)
         // document.getElementById('title').innerHTML = euroReal.name 
@@ -46,19 +80,13 @@ fetch(url+coins)
         //   currency: 'BRL'
         // })
 
-        let estaData = new Date(btcReal.create_date)
-        document.getElementById('title').innerHTML = btcReal.name 
-        document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
+        // let estaData = new Date(btcReal.create_date)
+        // document.getElementById('title').innerHTML = btcReal.name 
+        // document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
                    
-        valorMaximo.innerHTML= parseFloat(btcReal.high).toLocaleString('pt-br',{
-          style: 'currency',
-          currency: 'BRL'
-        })
+        // valorMaximo.innerHTML= parseFloat(btcReal.low).toFixed(5)
   
-        valorMinimo.innerHTML = parseFloat(btcReal.low).toLocaleString('pt-br', {
-          style:'currency',
-          currency: 'BRL'
-        })
+        // valorMinimo.innerHTML = parseFloat(btcReal.low).toFixed(5)
 
 
         btnConverter.addEventListener('click', function() {
@@ -143,31 +171,31 @@ fetch(url+coins)
 
       //cotações api
 
-      function mensagemFotmatada(moedaConvertida){
-        isNaN(valorEmReal) ? valorEmReal = 0 : ''
-        console.log("Moeda Convertida" + moedaConvertida)
-        mensagem.innerHTML = "O valor " + (valorEmReal).toLocaleString('pt-BR', { style: 'currency', 
-        currency: 'BRL' }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida       
+    //   function mensagemFotmatada(moedaConvertida){
+    //     isNaN(valorEmReal) ? valorEmReal = 0 : ''
+    //     console.log("Moeda Convertida" + moedaConvertida)
+    //     mensagem.innerHTML = "O valor " + (valorEmReal).toLocaleString('pt-BR', { style: 'currency', 
+    //     currency: 'BRL' }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida       
+    //   }
+
+
+      function bloquearBotao(){
+        if(valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null){
+            moedaSelecionada.setAttribute('disabled', 'disabled')
+            moedaSelecionada.style.background = '#ccc'
+            moedaSelecionada.style.cursor = 'not allowed'
+        }
       }
 
-
-    //   function bloquearBotao(){
-    //     if(valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null){
-    //         moedaSelecionada.setAttribute('disabled', 'disabled')
-    //         moedaSelecionada.style.background = '#ccc'
-    //         moedaSelecionada.style.cursor = 'not allowed'
-    //     }
-    //   }
-
-    //   function ativarBotao(){
-    //     if(valorDigitado.value > 0){
-    //         // moedaSelecionada.removeAttribute('disabled')
-    //         moedaSelecionada.style.background = '#ffc107'
-    //         moedaSelecionada.style.cursor = 'pointer'
-    //         }else{
-    //             console.log('Não ativou')
-    //         }
-    //   }
+      function ativarBotao(){
+        if(valorDigitado.value > 0){
+            moedaSelecionada.removeAttribute('disabled')
+            moedaSelecionada.style.background = '#ffc107'
+            moedaSelecionada.style.cursor = 'pointer'
+            }else{
+                console.log('Não ativou')
+            }
+      }
 
    
     // btnConverter = document.querySelector('.input')
