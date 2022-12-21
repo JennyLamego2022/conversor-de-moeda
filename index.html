@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Conversor de Moeda</title>
+</head>
+<body>
+    <main id="tela-principal">
+
+        <h1>Conversor de Moeda</h1>
+        <section class="conteudo">
+            <div class="form-group">
+                <span class="real">R$</span>
+                 <input 
+                 type="number"
+                 name="valorEmReal"
+                 id="valorEmReal"
+                 class="input" 
+                 step="0.01"
+                 min="0.00"
+                 max="9999999999.99"
+                 value=""
+                 tabindex="1"
+                 onclick="ativarBotao()"
+                 onchange="ativarBotao()"
+                 autofocus
+                 required
+                 placeholder="Digite o valor e escolha a moeda">
+            </div>
+            <br>
+            <div class="form-group">
+                <input 
+                type="radio" 
+                id="dolar" 
+                name="moedaEstrangeira" 
+                class="input radio"
+                value="Dólar" 
+                tabindex="2">
+                <label for="dolar">Dólar</label>
+
+                <input 
+                type="radio" 
+                id="euro" 
+                name="moedaEstrangeira" 
+                class="input radio"
+                value="Euro" 
+                tabindex="3">
+                <label for="dolar">Euro</label>
+
+                <input 
+                type="radio" 
+                id="bitcoins" 
+                name="moedaEstrangeira" 
+                class="input radio"
+                value="Bitcoins" 
+                tabindex="4">
+                <label for="dolar">Bitcoins</label>       
+                
+            </div>
+            
+            <h2 id="title"></h2>
+            <p id="date">
+                Data: <span id="thisdate"></span>
+            </p>
+            <p id="value">
+                Valor Máximo: <span id="maxvalue"></span><br>
+                Valor Mínimo: <span id="minvalue"></span>
+            </p>
+
+            <div class="form-group">
+                <button class="desativado-botao" id="btnConverter" 
+                onclick="ativarBotao(); bloquearBotao()" 
+                >Converter</button>
+
+                <button 
+                type="reset" 
+                class="limpar" 
+                id="btnLimpar" 
+                tabindex="7">Limpar</button>
+
+            </div>   
+                 
+        </section>
+        <div class="instrucoes">
+            <p class="centro" 
+            id="aviso">Digite o valor, escolha a moeda e clique no botão converter</p>
+        </div>
+
+        <div class="resultado" id="resultado">Resultado</div> 
+    </main>
+    
+    <script src="./assets/js/conversor.js"></script>
+</body>
+</html>
