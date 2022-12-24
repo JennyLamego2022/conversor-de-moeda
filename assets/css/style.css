@@ -89,17 +89,27 @@ h1 {
     padding: 1rem;
     border-radius: 10px;
     text-shadow: 5px 5px 10px black;
+    margin-left: 8px;
+    margin-right: 8px;
     
 }
 
 .valorEmReal{
     -webkit-opperance:none;
-    
+
 }
+
+
 
 h2 {
     color: yellow;
     text-shadow: 0.1rem 0.1rem 0.2rem black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 p {
