@@ -76,7 +76,7 @@ body{
     margin-right: 2rem;
     border-radius: 10px;
     /* background-color: rgba(255, 255, 255, 0.365); */
-    background-color: var(--conversor-bg-grad-color);
+    /* background-color: var(--conversor-bg-grad-color); */
     margin-top: 9rem;
     
 
@@ -97,6 +97,23 @@ h1 {
 .valorEmReal{
     -webkit-opperance:none;
 
+}
+
+.form-group{
+    text-align: center;
+    color: red;
+    word-spacing: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--conversor-text-primary-color);
+}
+
+label{
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    background-color:rgb(135, 135, 229);
+    
 }
 
 

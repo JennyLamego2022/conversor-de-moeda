@@ -189,7 +189,7 @@ fetch(url+coins)
 
       function ativarBotao(){
         if(valorDigitado.value > 0){
-            moedaSelecionada.removeAttribute('disabled')
+            moedaSelecionada.removeAttribute('disabled');
             moedaSelecionada.style.background = '#ffc107'
             moedaSelecionada.style.cursor = 'pointer'
             }else{
