@@ -74,20 +74,22 @@
                 <label for="bitcoins">Bitcoins</label>       
                 
             </div>
+            <div class="infoCotacao">
+                <h2 id="title"></h2>
+                <p id="date">
+                    Data: <span id="thisdate"></span>
+                </p>
+                <p id="value">
+                    Valor Máximo: <span id="maxvalue"></span><br>
+                    Valor Mínimo: <span id="minvalue"></span>
+                </p>
+            </div>
             
-            <h2 id="title"></h2>
-            <p id="date">
-                Data: <span id="thisdate"></span>
-            </p>
-            <p id="value">
-                Valor Máximo: <span id="maxvalue"></span><br>
-                Valor Mínimo: <span id="minvalue"></span>
-            </p>
 
             <div class="form-group">
                 <button class="desativado-botao" id="btnConverter" 
                 onclick="ativarBotao(); bloquearBotao()" 
-                disabled>Converter</button>
+                >Converter</button>
 
                 <button 
                 type="reset" 

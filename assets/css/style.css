@@ -3,8 +3,13 @@
 :root{
     --body-bg-base-color: rgb(2,0,36);
     --body-bg-grad-color:  linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --telaPrinc-bg-color: rgb(135, 135, 229);
     --conversor-bg-grad-color: rgba(255, 255, 255, 0.829);
     --conversor-text-primary-color: rgb(229, 224, 224);
+    --boxshadow-color: black;
+    --label-hover-color: green;
+    --text1-color: green;
+    --text2
 }
 
 *{
@@ -15,8 +20,8 @@
 html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    background-color: #333;
-    color: black;
+    /* background-color: #333;
+    color: black; */
 }
 
 body{
@@ -24,8 +29,7 @@ body{
     background: var(--body-bg-grad-color);
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 .posicao{
@@ -44,9 +48,9 @@ body{
     position: relative;
     margin-left: 4rem;
     margin-right: 4rem;
-    margin-top: 1em;   
-   
+    margin-top: 1em;      
 }
+
 #woman{
     /* margin-left: 3rem;
     margin-right: 3rem; */
@@ -57,16 +61,13 @@ body{
 }
 
 #pattern{
-    display: flex;
-   
+    display: flex;   
     border: 1px solid red;
     position: absolute;
     width: 100%;
     /* padding-left: 3rem;
     padding-right: 3rem; */
-    z-index: 8;
-   
- 
+    z-index: 8; 
 }
 
 #tela-principal{
@@ -77,18 +78,16 @@ body{
     border-radius: 10px;
     /* background-color: rgba(255, 255, 255, 0.365); */
     /* background-color: var(--conversor-bg-grad-color); */
-    margin-top: 9rem;
-    
-
+    margin-top: 9rem;  
 }
 
 h1 {
     margin-top: 10rem;
-    background-color:rgb(135, 135, 229);
+    background-color:var(--telaPrinc-bg-color);
     color: var(--conversor-text-primary-color);
     padding: 1rem;
     border-radius: 10px;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 10px var(--boxshadow-color);
     margin-left: 8px;
     margin-right: 8px;
     
@@ -108,30 +107,63 @@ h1 {
     color: var(--conversor-text-primary-color);
 }
 
+#valorEmReal{
+    border:none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 3px white;
+    width: 60%;
+    height: 2rem;
+}
+
 label{
     /* border: 1px solid red; */
     border-radius: 10px;
     padding: 0.3rem 1rem;
-    background-color:rgb(135, 135, 229);
+    background-color:var(--telaPrinc-bg-color);  
+    cursor: pointer;  
+    box-shadow: 2px 2px 8px black;
+}
+
+label:hover, label:active{
     
+    background-color:var(--label-hover-color);
+}
+
+input.radio{
+    display: none;
 }
 
 
 
+.infoCotacao{
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 0 1rem 1rem;
+    margin-top: 2rem;
+    background-color: rgba(211, 211, 232, 0.25);
+
+    
+}
+
+
 h2 {
     color: yellow;
-    text-shadow: 0.1rem 0.1rem 0.2rem black;
+    text-shadow: 0.1rem 0.1rem 0.2rem var(--boxshadow-color);
     padding-left: 2rem;
     padding-right: 2rem;
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
+    
 }
 
 p {
     margin: 0.5rem 1rem;
     font-size: 1.1rem;
+    
 }
 
 #maxvalue {
