@@ -96,9 +96,14 @@ fetch(url+coins)
             for(let i = 0; i < moedaSelecionada.length; i++){
                 if(moedaSelecionada[i].checked){
                     moedaEstrangeira = moedaSelecionada[i].value
+                    // document.getElementsByName(moedaEstrangeira).style.backgroundColor == '#fff'
                     console.log(moedaEstrangeira)
                 }
             }
+
+            // function bgActive(){
+            //     document.
+            // }
 
             let valorDoDolarHigh   = dolarReal.high 
             let valorDoEuro   = euroReal.high 
@@ -126,7 +131,7 @@ fetch(url+coins)
                         console.log(valorDoEuro)
                   
                     // let resultado = document.querySelector('.resultado')
-                        resultado.innerHTML = "O valor de" + 
+                        resultado.innerHTML = "O valor de " + 
                         (valorEmReal).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + 
                         " convertido em " + 
                         moedaEstrangeira + " é equivalente a " + 
@@ -167,7 +172,7 @@ fetch(url+coins)
       let btnConverter = document.querySelector('#btnConverter')
       let btnLimpar = document.querySelector('#btnLimpar')
 
-      let valorEmReal = 0
+      let valorEmReal = 0.00
       let moedaEstrangeira = ''
       let moedaConvertida = ''
 
@@ -239,7 +244,7 @@ fetch(url+coins)
       btnLimpar.addEventListener('click', function(){
         valorDigitado.focus()
         valorDigitado.value = ''
-        resultado.textContent = ''
+        resultado.textContent = 'Resultado'
         aviso.textContent = 'digite o valor, escolha a moeda e clique no botão converter'
         moedaSelecionada[0].checked = false
         moedaSelecionada[1].checked = false

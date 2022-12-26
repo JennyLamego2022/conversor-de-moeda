@@ -10,7 +10,7 @@
     --input1-boxshadow-color:white;
     --input2-boxshadow-color:black;
     --border-color:rgb(66, 65, 65);
-    --label-hover-color: green;
+    --label-hover-color:grey;
     --text-max-color: green;
     --text-min-color: red;
     --text-h2-color:yellow;
@@ -26,12 +26,6 @@
 html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    /* background-color: #333;
-    color: black; */
-    /* background: var(--body-bg-base-color);
-    background: var(--body-bg-grad-color);
-    background-repeat: no-repeat; */
-    /* height: auto; */
 }
 
 body{
@@ -49,15 +43,13 @@ body{
     flex-direction: column;
     width: 100%;
     height: 900px;
-    margin-top: 1em;
-    
+    margin-top: 1em;    
 }
 
 .parallax{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .mobile{
@@ -74,10 +66,7 @@ body{
 }
 
 #woman{
-    /* margin-left: 3rem;
-    margin-right: 3rem; */
     position: relative; 
-    /* border: 1px solid red; */
     padding-bottom: 3rem;
     z-index: 10;
 }
@@ -87,21 +76,14 @@ body{
     /* border: 1px solid red; */
     position: absolute;
     width: 100%;
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
     z-index: 8; 
 }
 
 #tela-principal{
-    /* position: absolute; */
     /* border: 1px solid red; */
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 10px;
-    /* background-color: rgba(255, 255, 255, 0.365); */
-    /* background-color: var(--conversor-bg-grad-color); */
-    
-    /* margin-top: 9rem;   */
 }
 
 h1 {
@@ -120,21 +102,24 @@ h1 {
     -webkit-opperance:none;
 }
 
+
 .form-group{
     text-align: center;
-    /* color: red; */
     word-spacing: 0.2rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--conversor-text-primary-color);
 }
 
+.conteudo{
+    width: 100%;  
+}
+
 .form-group button{
-    margin-top: 1.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 0.5rem 1rem; 
-    cursor: pointer;   
+    cursor: pointer; 
 }
 
 .form-group #btnConverter:hover{
@@ -145,8 +130,6 @@ h1 {
     background-color:var(--text-min-color);
 }
 
-
-
 #valorEmReal{
     border:none;
     border-radius: 8px;
@@ -156,45 +139,75 @@ h1 {
     height: 2rem;
 }
 
-label{
-    /* border: 1px solid red; */
-    border-radius: 10px;
-    padding: 0.3rem 1rem;
-    background-color:var(--telaPrinc-bg-color);  
-    cursor: pointer;  
-    box-shadow: 2px 2px 8px var(--input2-boxshadow-color);
+div.form-group:nth-child(3), input label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5rem;
+    /* border: 1px solid red; */   
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;    
 }
 
-label:hover, label:active{
-    
-    background-color:var(--label-hover-color);
+ input label{
+    border: 1px solid red;
+    border-radius: 10px;
+    cursor: pointer;  
+    background-color: transparent;
+    width: 80px;
+    height: 40px;    
+    align-items: center;
+    justify-content: center;
+    z-index: 10;    
+}
+
+input label:hover{
+    background-color: blueviolet;
+}
+
+.moeda{
+   background-color:var(--telaPrinc-bg-color);  
+   cursor: pointer;  
+   box-shadow: 2px 2px 8px var(--input2-boxshadow-color); 
+   padding-left: 0;
+   padding-right: 0;
+   width: 80px;
+   height: 30px;
+   border: 1px solid red;
+   /* position: relative; */  
 }
 
 input.radio{
-    display: none;
+    display: none;   
+}
+
+.moeda:hover{
+    background-color:var(--label-hover-color);
+}
+
+.moeda:focus{
+    background-color: var(--text-max-color);
+}
+
+#btnConverter{
+    margin-right: 0.8rem;
 }
 
 .infoCotacao{
     /* border: 1px solid red; */
-    /* border-radius: 10px; */
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
-    /* box-shadow: 5px 5px 10px black; */
     padding: 1rem 1rem 1rem;
     margin-top: 0.8rem;
-    /* margin-bottom: 1rem; */
-    /* background-color: rgba(211, 211, 232, 0.25); */    
 }
-
 
 h2 {
     color: var(--text-h2-color);
     text-shadow: 0.1rem 0.1rem 0.2rem var(--boxshadow-color);
-    /* padding-left: 2rem;
-    padding-right: 2rem; */
     text-align: center;
     font-size: 1.2rem;
-    /* margin-top: 1rem; */
     margin-bottom: 1rem;    
 }
 
@@ -223,13 +236,10 @@ p {
 #aviso{
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;    
 }
 
 .resultado{
-    /* border: 1px solid; */
-    /* padding: 2rem; */
     margin-left: 8px;
     margin-right: 8px;
     height: 4.5rem;
@@ -274,7 +284,6 @@ p {
     }
     
     h1{
-        /* width: 100%; */
         padding-left: 0;
         padding-right: 0;       
     }
@@ -285,14 +294,9 @@ p {
         margin-left: 20rem;
         margin-right: 0;
         margin-top: 0;
-        /* border: 1px solid red; */
-        /* transform: scale(0.8); */
     }
 
-    #pattern{
-        /* background-color: black; */
-    }
-
+  
     #tela-principal{
         /* border: 1px solid red; */
         margin: 30px;
@@ -309,10 +313,9 @@ p {
 
     .resultado{
         width: 430px;
-        height: 72px;
-      
-
+        height: 72px;    
     }
+
     .conversao{
         display: flex;
         flex-direction: column;
@@ -324,9 +327,6 @@ p {
 
  @media only screen and (min-width:1078px) {
 
-    /* #tela-principal{
-        margin-left: 100px;
-    } */
     .bloco-principal{
         display: flex;
         flex-direction: row;
@@ -335,7 +335,6 @@ p {
         justify-content: center;
         gap: 2rem;
        margin-top: 2rem;
-       /* justify-content: space-between; */
     }
 
     .infoCotacao{
@@ -346,13 +345,13 @@ p {
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.137);
         border: none;
-        /* margin-right: 80px; */
     }
 
     h2{
         padding-left: 15px;
         padding-right: 15px;
     }
+    
     #date{
         text-align: center;
     }
