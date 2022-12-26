@@ -106,6 +106,14 @@ h1 {
     font-weight: 700;
     color: var(--conversor-text-primary-color);
 }
+.form-group button{
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+
+    
+}
 
 #valorEmReal{
     border:none;
@@ -123,6 +131,7 @@ label{
     background-color:var(--telaPrinc-bg-color);  
     cursor: pointer;  
     box-shadow: 2px 2px 8px black;
+
 }
 
 label:hover, label:active{
@@ -177,4 +186,17 @@ p {
 #minvalue {
     color: red;
     font-weight: 700;
+}
+
+.resultado{
+    /* border: 1px solid; */
+    /* padding: 2rem; */
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 4.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.537);
+    font-weight: 700;
+    font-size: 1.2rem;
 }

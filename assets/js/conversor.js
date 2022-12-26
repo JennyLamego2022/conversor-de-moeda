@@ -109,40 +109,42 @@ fetch(url+coins)
                 case 'Dólar':
                     moedaConvertida  = valorEmReal / valorDoDolarHigh
                         console.log(moedaConvertida)
+                        console.log(valorDoDolarHigh)
                   
                     // let resultado = document.querySelector('.resultado')
-                        resultado.innerHTML = "O valor " + 
+                        resultado.innerHTML = "O valor de " + 
                         (valorEmReal).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + 
                         " convertido em " + 
-                        moedaEstrangeira + " é " + 
-                        parseFloat(moedaConvertida).toLocaleString('pt-br', {style: 'currency',currency: 'BRL'
+                        moedaEstrangeira + " é equivalente a " + 
+                        parseFloat(moedaConvertida).toLocaleString('en-US', {style: 'currency',currency: 'USD'
                     }) + "."
                 break
 
                 case 'Euro':
                     moedaConvertida  = valorEmReal / valorDoEuro
                         console.log(moedaConvertida)
+                        console.log(valorDoEuro)
                   
                     // let resultado = document.querySelector('.resultado')
-                        resultado.innerHTML = "O valor " + 
+                        resultado.innerHTML = "O valor de" + 
                         (valorEmReal).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + 
                         " convertido em " + 
-                        moedaEstrangeira + " é " + 
-                        parseFloat(moedaConvertida).toLocaleString('pt-br', {style: 'currency',currency: 'BRL'
+                        moedaEstrangeira + " é equivalente a " + 
+                        parseFloat(moedaConvertida).toLocaleString('de-DE', {style: 'currency',currency: 'EUR'
                     }) + "."
                 break
 
                 case 'Bitcoins':
                     moedaConvertida  = valorEmReal / valorDoBtc
                         console.log(moedaConvertida)
+                        console.log(valorDoBtc)
                   
                     // let resultado = document.querySelector('.resultado')
-                        resultado.innerHTML = "O valor " + 
+                        resultado.innerHTML = "O valor de " + 
                         (valorEmReal).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + 
                         " convertido em " + 
-                        moedaEstrangeira + " é " + 
-                        parseFloat(moedaConvertida).toLocaleString('pt-br', {style: 'currency',currency: 'BRL'
-                    }) + "."
+                        moedaEstrangeira + " é equivalente a " + 
+                        parseFloat(moedaConvertida).toFixed(5) + " Bitcoins."
                 break
 
 
