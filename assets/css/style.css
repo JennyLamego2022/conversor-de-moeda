@@ -9,7 +9,7 @@
     --textshadow-color: black;
     --input1-boxshadow-color:white;
     --input2-boxshadow-color:black;
-    --border-color:black;
+    --border-color:rgb(66, 65, 65);
     --label-hover-color: green;
     --text-max-color: green;
     --text-min-color: red;
@@ -100,6 +100,7 @@ body{
     border-radius: 10px;
     /* background-color: rgba(255, 255, 255, 0.365); */
     /* background-color: var(--conversor-bg-grad-color); */
+    
     /* margin-top: 9rem;   */
 }
 
@@ -132,8 +133,19 @@ h1 {
     margin-top: 1.5rem;
     border: none;
     border-radius: 5px;
-    padding: 0.5rem 1rem;    
+    padding: 0.5rem 1rem; 
+    cursor: pointer;   
 }
+
+.form-group #btnConverter:hover{
+    background-color:var(--text-max-color);
+}
+
+.form-group .limpar:hover{
+    background-color:var(--text-min-color);
+}
+
+
 
 #valorEmReal{
     border:none;
@@ -165,8 +177,8 @@ input.radio{
 .infoCotacao{
     /* border: 1px solid red; */
     /* border-radius: 10px; */
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
     /* box-shadow: 5px 5px 10px black; */
     padding: 1rem 1rem 1rem;
     margin-top: 0.8rem;
@@ -192,20 +204,27 @@ p {
     font-size: 1.1rem;    
 }
 
+#date{
+    font-weight: 700;
+}
+
 #maxvalue {
     color: var(--text-max-color);
     font-weight: 700;
+    color: black;
 }
 
 #minvalue {
     color: var(--text-min-color);
     font-weight: 700;
+    color: black;
 }
 
 #aviso{
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    
 }
 
 .resultado{
@@ -219,7 +238,11 @@ p {
     background-color: var(--resultado-bg-color);
     font-weight: 700;
     font-size: 1.2rem;
-    text-align: center;    
+    text-align: center;   
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
 }
 
 @media only screen and (min-width:414px) {
@@ -237,11 +260,100 @@ p {
         margin-top: 0; 
         margin-bottom: 0;
         padding-top: 0;  
-        padding-bottom: 0;   
+        padding-bottom: 0; 
+        /* border: 1px solid red; */
     }
 
     .infoCotacao{
         margin-bottom: 0;
+        margin-right: 10px;
+        /* border: 1px solid red; */
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+    
+    h1{
+        /* width: 100%; */
+        padding-left: 0;
+        padding-right: 0;       
     }
 
+    .mobile{
+        position: absolute;
+        z-index: 10;
+        margin-left: 20rem;
+        margin-right: 0;
+        margin-top: 0;
+        /* border: 1px solid red; */
+        /* transform: scale(0.8); */
+    }
+
+    #pattern{
+        /* background-color: black; */
+    }
+
+    #tela-principal{
+        /* border: 1px solid red; */
+        margin: 30px;
+        margin-left: 140px;
+        position: relative;
+        width: 100%;
+        padding-left: 10rem;
+        background-color: rgba(255, 255, 255, 0.137);
+    }
+
+    #valorEmReal{
+        width: 80%;
+    }
+
+    .resultado{
+        width: 430px;
+        height: 72px;
+      
+
+    }
+    .conversao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+ }
+
+ @media only screen and (min-width:1078px) {
+
+    /* #tela-principal{
+        margin-left: 100px;
+    } */
+    .bloco-principal{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 2rem;
+       margin-top: 2rem;
+       /* justify-content: space-between; */
+    }
+
+    .infoCotacao{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.137);
+        border: none;
+        /* margin-right: 80px; */
+    }
+
+    h2{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #date{
+        text-align: center;
+    }
  }
