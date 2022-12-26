@@ -55,14 +55,14 @@ body{
     /* margin-left: 3rem;
     margin-right: 3rem; */
     position: relative; 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-bottom: 3rem;
     z-index: 10;
 }
 
 #pattern{
     display: flex;   
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
     width: 100%;
     /* padding-left: 3rem;
@@ -72,7 +72,7 @@ body{
 
 #tela-principal{
     position: absolute;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 10px;
@@ -137,12 +137,15 @@ input.radio{
 
 
 .infoCotacao{
-    border: 1px solid red;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-    padding: 0 1rem 1rem;
+    /* border: 1px solid red; */
+    /* border-radius: 10px; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    /* box-shadow: 5px 5px 10px black; */
+    padding: 1rem 1rem 1rem;
     margin-top: 2rem;
-    background-color: rgba(211, 211, 232, 0.25);
+    /* background-color: rgba(211, 211, 232, 0.25); */
 
     
 }
@@ -155,7 +158,7 @@ h2 {
     padding-right: 2rem;
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     margin-bottom: 1.5rem;
     
 }
