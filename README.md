@@ -28,6 +28,7 @@ Consumir uma API Rest de conversão de moeda e juntamente adaptar a um design do
 ## 🚀 Link do projeto para visualização no navegador
 
 Deploy Netlify: https://tubular-travesseiro-461536.netlify.app/
+<br>
 Deploy Github: https://jennylamego2022.github.io/conversor-de-moeda/
 
 
