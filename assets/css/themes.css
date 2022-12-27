@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 :root{
     --body-bg-base-color: rgb(2,0,36);
     --body-bg-grad-color:  linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --body-bg-gradiente-color: linear-gradient(180deg,  hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    --principal-bg-color:  hsl(240, 5%, 91%);
+
     --telaPrinc-bg-color: rgb(135, 135, 229);
     --conversor-bg-grad-color: rgba(255, 255, 255, 0.829);
     --conversor-text-primary-color: rgb(229, 224, 224);
@@ -11,7 +14,12 @@
     --input2-boxshadow-color:black;
     --border-color:rgb(66, 65, 65);
     --label-hover-color:grey;
-    --text-max-color: green;
+
+    --text-primary-color: hsl(238, 29%, 16%);
+    --text-veryDark-color: hsl(237, 12%, 33%);
+    --text-dark-color: hsl(240, 6%, 50%);
+
+    --text-max-color: rgb(30, 105, 30);
     --text-min-color: red;
     --text-h2-color:yellow;
     --resultado-bg-color:rgba(255, 255, 255, 0.537);
@@ -24,13 +32,13 @@
 }
 
 html, body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: 100%;
 }
 
 body{
-    background: var(--body-bg-base-color);
-    background: var(--body-bg-grad-color);
+    background: var(--body-bg-gradiente-color);
+    /* background: var(--body-bg-grad-color); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -57,12 +65,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    position: relative;
+    position: absolute;
     margin-left: 4rem;
     margin-right: 4rem;
-    margin-top: 1em;   
+    margin-top: 18em;   
     width: 285px;
     height: 264px;   
+     border: 1px solid red;
 }
 
 #woman{
@@ -80,19 +89,31 @@ body{
 }
 
 #tela-principal{
-    /* border: 1px solid red; */
+    border: 1px solid red;
+    background-color: var(--principal-bg-color);
     margin-left: 2rem;
     margin-right: 2rem;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding-top: 8rem;
+    position: relative;
+    margin-top: 9em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;   
+
+}
+
+.conversao{
+    margin-bottom: 2rem;
 }
 
 h1 {
-    margin-top: 2rem;
-    background-color:var(--telaPrinc-bg-color);
-    color: var(--conversor-text-primary-color);
-    padding: 1rem;
+    /* margin-top:  */
+    /* background-color:var(--telaPrinc-bg-color); */
+    color: var(--text-primary-color);
+    /* padding: 1rem; */
     border-radius: 10px;
-    text-shadow: 5px 5px 10px var(--textshadow-color);
+    /* text-shadow: 2px 2px 18px var(--text-dark-color); */
     margin-left: 8px;
     margin-right: 8px;  
     text-align: center;  
@@ -100,6 +121,8 @@ h1 {
 
 .valorEmReal{
     -webkit-opperance:none;
+    font-family: 'Kumbh Sans', sans-serif;
+    color:var(--text-veryDark-color);
 }
 
 
@@ -108,7 +131,8 @@ h1 {
     word-spacing: 0.2rem;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--conversor-text-primary-color);
+    color: var(--text-dark-color);
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .conteudo{
@@ -120,6 +144,8 @@ h1 {
     border-radius: 8px;
     padding: 0.5rem 1rem; 
     cursor: pointer; 
+    font-family: 'Kumbh Sans', sans-serif;
+    color:var(--conversor-text-primary-color);  
 }
 
 .form-group #btnConverter:hover{
@@ -137,6 +163,7 @@ h1 {
     box-shadow: 0 0 3px var(--input1-boxshadow-color);
     width: 60%;
     height: 2rem;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 div.form-group:nth-child(3), input label{
@@ -152,7 +179,7 @@ div.form-group:nth-child(3), input label{
 }
 
  input label{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 10px;
     cursor: pointer;  
     background-color: transparent;
@@ -160,7 +187,8 @@ div.form-group:nth-child(3), input label{
     height: 40px;    
     align-items: center;
     justify-content: center;
-    z-index: 10;    
+    z-index: 10;
+     
 }
 
 input label:hover{
@@ -168,14 +196,14 @@ input label:hover{
 }
 
 .moeda{
-   background-color:var(--telaPrinc-bg-color);  
+   background-color:var(--text-veryDark-color);  
    cursor: pointer;  
-   box-shadow: 2px 2px 3px var(--input2-boxshadow-color); 
+   /* box-shadow: 2px 2px  blueviolet;  */
    padding-left: 0;
    padding-right: 0;
    width: 80px;
    height: 30px;
-   border: 1px solid red;
+   /* border: 1px solid red; */
    /* position: relative; */  
 }
 
@@ -191,27 +219,40 @@ input.radio{
     background-color: var(--text-max-color);
 }
 
-#btnConverter{
+#btnConverter, #btnLimpar{
     margin-right: 0.8rem;
+    background-color: var(--text-dark-color);
+}
+
+#btnLimpar:hover{
+    background-color: var(--text-min-color);
 }
 
 .infoCotacao{
     /* border: 1px solid red; */
-    border-top: 2px solid var(--border-color);
-    border-bottom: 2px solid var(--border-color);
+    border-top: 2px solid var(--text-dark-color);
+    border-bottom: 2px solid var(--text-dark-color);
     padding: 1rem 1rem 1rem;
     margin-top: 0.8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
+.centro{
+    color: var(--text-primary-color);
+    
+}   
+
 h2 {
-    color: var(--text-h2-color);
+    color: var(--text-primary-color);
     text-shadow: 0.1rem 0.1rem 0.2rem var(--boxshadow-color);
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1rem;    
 }
 
 p {
+    color: var(--text-dark-color);
     margin: 0.5rem 1rem;
     margin-bottom: 0;
     font-size: 1.1rem;    
@@ -222,13 +263,13 @@ p {
 }
 
 #maxvalue {
-    color: var(--text-max-color);
+    color: var(--text-dark-color);
     font-weight: 700;
     color: black;
 }
 
 #minvalue {
-    color: var(--text-min-color);
+    color: var(--text-dark-color);
     font-weight: 700;
     color: black;
 }
@@ -240,12 +281,14 @@ p {
 }
 
 .resultado{
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
     height: 4.5rem;
     padding: 1rem;
     border-radius: 8px;
     background-color: var(--resultado-bg-color);
+    color:var(--text-dark-color);
     font-weight: 700;
     font-size: 1.2rem;
     text-align: center;   

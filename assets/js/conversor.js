@@ -33,7 +33,7 @@ fetch(url+coins)
     //                 style:'currency',
     //                 currency: 'BRL'
     //                 })
-    //   }else if(moedaEstrangeira = '#euro'){
+    //   }else if(moedaEstrangeira == '#euro'){
     //         let estaData = new Date(euroReal.create_date)
     //                 document.getElementById('title').innerHTML = euroReal.name 
     //                 document.getElementById('thisdate').innerHTML = estaData.toLocaleString()
@@ -101,10 +101,7 @@ fetch(url+coins)
                 }
             }
 
-            // function bgActive(){
-            //     document.
-            // }
-
+          
             let valorDoDolarHigh   = dolarReal.high 
             let valorDoEuro   = euroReal.high 
             let valorDoBtc   = btcReal.high 
