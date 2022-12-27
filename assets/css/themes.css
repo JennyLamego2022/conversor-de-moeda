@@ -25,6 +25,47 @@
     --resultado-bg-color:rgba(255, 255, 255, 0.537);
 }
 
+body.light{
+    --body-bg-base-color: rgb(2,0,36);
+    --body-bg-grad-color:  linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --body-bg-gradiente-color: linear-gradient(180deg,  hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    --principal-bg-color:  hsl(240, 5%, 91%);
+
+    --telaPrinc-bg-color: rgb(135, 135, 229);
+    --conversor-bg-grad-color: rgba(255, 255, 255, 0.829);
+    --conversor-text-primary-color: rgb(229, 224, 224);
+    --textshadow-color: black;
+    
+  
+    --border-color:rgb(66, 65, 65);
+    --label-hover-color:grey;
+
+    --text-primary-color: hsl(238, 29%, 16%);
+    --text-veryDark-color: hsl(237, 12%, 33%);
+    --text-dark-color: hsl(240, 6%, 50%);
+    --text-second-color: hsl(237, 12%, 33%);
+    --text-maxMin-color: black;
+    --text-max-color: rgb(30, 105, 30);
+    --text-min-color: red;
+    --text-h2-color:yellow;
+    --resultado-bg-color:rgba(255, 255, 255, 0.537);
+
+    --border-bottom-color: none;
+}
+
+body{
+    --body-bg-gradiente-color: url(../imagens/design11-01_generated.jpg);
+    --principal-bg-color:  hsla(240, 4%, 91%, 0.102);
+    --text-primary-color: rgb(229, 224, 224);
+    --border-bottom-color: 3px solid rgb(177, 119, 12);
+    --text-veryDark-color: hsl(237, 12%, 33%);
+    --text-dark-color: hsl(238, 29%, 16%);
+    --text-second-color: rgb(229, 224, 224);
+    --text-maxMin-color: white;
+    
+    
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -38,7 +79,7 @@ html, body {
 
 body{
     background: var(--body-bg-gradiente-color);
-    /* background: var(--body-bg-grad-color); */
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -46,12 +87,59 @@ body{
     flex-direction: column;    
 }
 
+.toggle-mode{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 1em;
+    row-gap: 0;
+    margin-top: 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--text-second-color);
+    margin-right: 2em;
+    
+  }  
+  
+  .toggle-mode input[type=checkbox]{
+    -webkit-appearance: none;
+    background-color: var(--principal-bg-color); 
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 26px;
+    padding: 5px;
+    position: relative;     
+    /* border: 1px solid var(--principal-bg-color); */
+  }
+  
+  .toggle-mode input[type=checkbox]::before {
+    content: '';
+    top:2px;
+    left:2px;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: var(--body-bg-gradiente-color);  
+    position: absolute;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;  
+}
+  
+  .toggle-mode input[type=checkbox]:checked::before{
+    transform: translateX(24px);
+    /* border: 1px solid red; */
+  }
+
 .posicao{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 900px;
-    margin-top: 1em;    
+    height: 900px;   
 }
 
 .parallax{
@@ -71,7 +159,7 @@ body{
     margin-top: 18em;   
     width: 285px;
     height: 264px;   
-     border: 1px solid red;
+     /* border: 1px solid red; */
 }
 
 #woman{
@@ -82,14 +170,12 @@ body{
 
 #pattern{
     display: flex;   
-    /* border: 1px solid red; */
     position: absolute;
     width: 100%;
     z-index: 8; 
 }
 
 #tela-principal{
-    border: 1px solid red;
     background-color: var(--principal-bg-color);
     margin-left: 2rem;
     margin-right: 2rem;
@@ -99,8 +185,7 @@ body{
     margin-top: 9em;
     display: flex;
     flex-direction: column;
-    align-content: center;   
-
+    align-content: center;
 }
 
 .conversao{
@@ -108,12 +193,8 @@ body{
 }
 
 h1 {
-    /* margin-top:  */
-    /* background-color:var(--telaPrinc-bg-color); */
     color: var(--text-primary-color);
-    /* padding: 1rem; */
     border-radius: 10px;
-    /* text-shadow: 2px 2px 18px var(--text-dark-color); */
     margin-left: 8px;
     margin-right: 8px;  
     text-align: center;  
@@ -155,6 +236,9 @@ h1 {
 .form-group .limpar:hover{
     background-color:var(--text-min-color);
 }
+.real{
+    color: var(--text-second-color); 
+}
 
 #valorEmReal{
     border:none;
@@ -191,20 +275,13 @@ div.form-group:nth-child(3), input label{
      
 }
 
-input label:hover{
-    background-color: blueviolet;
-}
-
 .moeda{
    background-color:var(--text-veryDark-color);  
    cursor: pointer;  
-   /* box-shadow: 2px 2px  blueviolet;  */
    padding-left: 0;
    padding-right: 0;
    width: 80px;
    height: 30px;
-   /* border: 1px solid red; */
-   /* position: relative; */  
 }
 
 input.radio{
@@ -230,17 +307,18 @@ input.radio{
 
 .infoCotacao{
     /* border: 1px solid red; */
-    border-top: 2px solid var(--text-dark-color);
-    border-bottom: 2px solid var(--text-dark-color);
+    border-top: 2px solid var(--text-second-color);
+    border-bottom: 2px solid var(--text-second-color);
+    
     padding: 1rem 1rem 1rem;
     margin-top: 0.8rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    
 }
 
 .centro{
-    color: var(--text-primary-color);
-    
+    color: var(--text-primary-color);    
 }   
 
 h2 {
@@ -252,7 +330,7 @@ h2 {
 }
 
 p {
-    color: var(--text-dark-color);
+    color: var(--text-second-color);
     margin: 0.5rem 1rem;
     margin-bottom: 0;
     font-size: 1.1rem;    
@@ -260,18 +338,17 @@ p {
 
 #date{
     font-weight: 700;
+    color: var(--text-second-color);
 }
 
 #maxvalue {
-    color: var(--text-dark-color);
     font-weight: 700;
-    color: black;
+    color: var(--text-maxMin-color);
 }
 
 #minvalue {
-    color: var(--text-dark-color);
     font-weight: 700;
-    color: black;
+    color: var(--text-maxMin-color);
 }
 
 #aviso{
@@ -285,12 +362,12 @@ p {
     margin-right: 2rem;
     margin-top: 2rem;
     height: 4.5rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
     background-color: var(--resultado-bg-color);
     color:var(--text-dark-color);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;   
     display: flex;
     align-content: center;
@@ -314,20 +391,19 @@ p {
         margin-bottom: 0;
         padding-top: 0;  
         padding-bottom: 0; 
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .infoCotacao{
-        margin-bottom: 0;
+        
         margin-right: 10px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         padding-left: 0;
         padding-right: 0;
-
     }
     
     h1{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         padding-left: 0;
         padding-right: 0;       
     }
@@ -382,6 +458,10 @@ p {
        margin-top: 2rem;
     }
 
+    .resultado{
+        border-bottom:var(--border-bottom-color);
+    }
+
     .infoCotacao{
         margin-top: 0;
         display: flex;
@@ -390,6 +470,7 @@ p {
         border-radius: 8px;
         background-color:var(--resultado-bg-color);
         border: none;
+        border-bottom:var(--border-bottom-color);
     }
 
     h2{

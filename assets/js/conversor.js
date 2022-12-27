@@ -248,3 +248,10 @@ fetch(url+coins)
         moedaSelecionada[2].checked = false
         moedaSelecionada[3].checked = false 
 })
+
+
+const checkbox = document.querySelector('.btn-toggle');
+
+checkbox.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+})
