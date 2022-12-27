@@ -314,19 +314,20 @@ p {
         margin-bottom: 0;
         padding-top: 0;  
         padding-bottom: 0; 
-        /* border: 1px solid red; */
+        border: 1px solid red;
     }
 
     .infoCotacao{
         margin-bottom: 0;
         margin-right: 10px;
-        /* border: 1px solid red; */
+        border: 1px solid red;
         padding-left: 0;
         padding-right: 0;
 
     }
     
     h1{
+        border: 1px solid red;
         padding-left: 0;
         padding-right: 0;       
     }
@@ -347,7 +348,8 @@ p {
         position: relative;
         width: 100%;
         padding-left: 10rem;
-        background-color: rgba(255, 255, 255, 0.137);
+        padding-top: 4rem;
+       
     }
 
     #valorEmReal{
@@ -386,7 +388,7 @@ p {
         flex-direction: column;
         justify-content: center;
         border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.137);
+        background-color:var(--resultado-bg-color);
         border: none;
     }
 
