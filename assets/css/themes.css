@@ -183,7 +183,7 @@ body{
     padding-top: 8rem;
     position: relative;
     margin-top: 9em;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
