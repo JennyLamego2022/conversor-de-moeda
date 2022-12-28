@@ -46,7 +46,7 @@ body.light{
     --text-second-color: hsl(237, 12%, 33%);
     --text-maxMin-color: black;
     --text-max-color: rgb(30, 105, 30);
-    --text-min-color: red;
+    --text-min-color: rgb(194, 13, 13);
     --text-h2-color:yellow;
     --resultado-bg-color:rgba(255, 255, 255, 0.537);
 
@@ -284,6 +284,8 @@ div.form-group:nth-child(3), input label{
    height: 30px;
 }
 
+
+
 input.radio{
     display: none;   
 }
@@ -298,12 +300,16 @@ input.radio{
 
 #btnConverter, #btnLimpar{
     margin-right: 0.8rem;
-    background-color: var(--text-dark-color);
+    background-color: var(--text-max-color);
 }
 
-#btnLimpar:hover{
+#btnLimpar{
     background-color: var(--text-min-color);
 }
+
+/* #btnLimpar:hover{
+    background-color: var(--text-min-color);
+} */
 
 .infoCotacao{
     /* border: 1px solid red; */
