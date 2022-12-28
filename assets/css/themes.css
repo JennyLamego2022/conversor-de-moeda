@@ -183,6 +183,7 @@ body{
     padding-top: 8rem;
     position: relative;
     margin-top: 9em;
+    /* margin-bottom: 1rem; */
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -204,6 +205,7 @@ h1 {
     -webkit-opperance:none;
     font-family: 'Kumbh Sans', sans-serif;
     color:var(--text-veryDark-color);
+   
 }
 
 
@@ -214,6 +216,9 @@ h1 {
     font-weight: 700;
     color: var(--text-dark-color);
     font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo{
@@ -229,9 +234,9 @@ h1 {
     color:var(--conversor-text-primary-color);  
 }
 
-.form-group #btnConverter:hover{
+/* .form-group #btnConverter:hover{
     background-color:var(--text-max-color);
-}
+} */
 
 .form-group .limpar:hover{
     background-color:var(--text-min-color);
@@ -243,11 +248,34 @@ h1 {
 #valorEmReal{
     border:none;
     border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     text-align: center;
-    box-shadow: 0 0 3px var(--input1-boxshadow-color);
+    /* box-shadow: 0 0 3px var(--input1-boxshadow-color); */
     width: 60%;
     height: 2rem;
     font-family: 'Kumbh Sans', sans-serif;
+    /* border: 1px solid red; */
+    margin-left: 0.5rem;
+}
+
+#valorEmReal {
+    /* margin: 20px; */
+}
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#btnLimpar{
+    background-color: white;
+    color: black;
+    font-size: 1.3rem;
+    padding: 4px 5px;
+    width: 2.2rem;
+    height: 32px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 div.form-group:nth-child(3), input label{
@@ -259,7 +287,8 @@ div.form-group:nth-child(3), input label{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
+    margin-top: 2rem;   
 }
 
  input label{
@@ -298,14 +327,12 @@ input.radio{
     background-color: var(--text-max-color);
 }
 
-#btnConverter, #btnLimpar{
+/* #btnConverter, #btnLimpar{
     margin-right: 0.8rem;
     background-color: var(--text-max-color);
-}
+} */
 
-#btnLimpar{
-    background-color: var(--text-min-color);
-}
+
 
 /* #btnLimpar:hover{
     background-color: var(--text-min-color);
@@ -422,6 +449,11 @@ p {
         margin-top: 0;
     }
 
+    .form-group{
+       margin-left: 5rem;
+       margin-right: 5rem;
+    }
+
   
     #tela-principal{
         /* border: 1px solid red; */
@@ -461,11 +493,16 @@ p {
         align-content: center;
         justify-content: center;
         gap: 2rem;
-       margin-top: 2rem;
+        margin-top: 2rem;
     }
 
     .resultado{
         border-bottom:var(--border-bottom-color);
+    }
+
+    .conversao{
+        /* width: 515px; */
+        width: 32rem;
     }
 
     .infoCotacao{
@@ -477,6 +514,8 @@ p {
         background-color:var(--resultado-bg-color);
         border: none;
         border-bottom:var(--border-bottom-color);
+        /* width: 271px; */
+        width: 17rem;
     }
 
     h2{

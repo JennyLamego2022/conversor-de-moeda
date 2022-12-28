@@ -159,7 +159,7 @@ btnLimpar.addEventListener('click', function(){
     document.getElementById('thisdate').textContent = ''
     document.getElementById('maxvalue').textContent = ''
     document.getElementById('minvalue').textContent = ''
-    aviso.textContent = 'Digite o valor, escolha a moeda e clique no botão converter'
+    aviso.textContent = 'Digite o valor, escolha a moeda e clique no botão converter.'
     moedaSelecionada[0].checked = false
     moedaSelecionada[1].checked = false
     moedaSelecionada[2].checked = false    
