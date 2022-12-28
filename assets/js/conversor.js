@@ -27,19 +27,21 @@ fetch(url+coins)
   
         // valorMinimo.innerHTML = parseFloat(btcReal.low).toFixed(5)
 
-
-        btnConverter.addEventListener('click', function() {
-            valorEmReal = parseFloat(valorDigitado.value)
-
-            console.log('Escolha a moeda estrangeira')
-            for(let i = 0; i < moedaSelecionada.length; i++){
-                if(moedaSelecionada[i].checked){
-                    moedaEstrangeira = moedaSelecionada[i].value
-                    console.log(moedaEstrangeira)
+        let btnConverter = document.querySelectorAll('.moeda');
+            
+        btnConverter.forEach(element => {
+            // console.log(element)
+            element.addEventListener('click', function() {
+                valorEmReal = parseFloat(valorDigitado.value)
+                
+                console.log('Escolha a moeda estrangeira')
+                for(let i = 0; i < moedaSelecionada.length; i++){
+                    if(moedaSelecionada[i].checked){
+                        moedaEstrangeira = moedaSelecionada[i].value
+                        console.log(moedaEstrangeira)
+                    }
                 }
-            }
-
-          
+              
             let valorDoDolarHigh   = dolarReal.high 
             let valorDoEuro   = euroReal.high 
             let valorDoBtc   = btcReal.high 
@@ -51,13 +53,12 @@ fetch(url+coins)
                         console.log(moedaConvertida)
                         console.log(valorDoDolarHigh)
                   
-                    // let resultado = document.querySelector('.resultado')
                         resultado.innerHTML = "O valor de " + 
                         (valorEmReal).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + 
                         " convertido em " + 
                         moedaEstrangeira + " é equivalente a " + 
                         parseFloat(moedaConvertida).toLocaleString('en-US', {style: 'currency',currency: 'USD'
-                    }) + "."
+                        }) + "."
 
                         let estaData = new Date(dolarReal.create_date)
                         document.getElementById('title').innerHTML = dolarReal.name 
@@ -85,7 +86,7 @@ fetch(url+coins)
                         " convertido em " + 
                         moedaEstrangeira + " é equivalente a " + 
                         parseFloat(moedaConvertida).toLocaleString('de-DE', {style: 'currency',currency: 'EUR'
-                    }) + "."
+                        }) + "."
 
                         let estaData2 = new Date(euroReal.create_date)
                         document.getElementById('title').innerHTML = euroReal.name 
@@ -100,6 +101,8 @@ fetch(url+coins)
                         style:'currency',
                         currency: 'BRL'
                         })
+
+                        
                 break
 
                 case 'Bitcoins':
@@ -122,14 +125,15 @@ fetch(url+coins)
                         valorMinimo.innerHTML = parseFloat(btcReal.low).toFixed(5)
                 break
 
-
                 default:
-                    aviso.textContent = 'Escolha uma moeda estrangeira'
-              }
+                    aviso.textContent = 'Resultado da conversão:'
+            }
               isNaN(moedaConvertida) ? moedaConvertida = 0 : ''
-
-        })     
-    } )     
+            // })
+        })   
+        });
+          
+    })     
 
      
       //formulario
@@ -139,27 +143,26 @@ fetch(url+coins)
 
       let aviso = document.querySelector('#aviso')
       
-      let btnConverter = document.querySelector('#btnConverter')
+     
+      let btnConverter2 = document.querySelector('#euro')
       let btnLimpar = document.querySelector('#btnLimpar')
 
       let valorEmReal = 0.00
       let moedaEstrangeira = ''
       let moedaConvertida = ''
 
-   
-      btnLimpar.addEventListener('click', function(){
-        valorDigitado.focus()
-        valorDigitado.value = ''
-        resultado.textContent = 'Resultado'
-        document.getElementById('title').textContent = '' 
-        document.getElementById('thisdate').textContent = ''
-        document.getElementById('maxvalue').textContent = ''
-        document.getElementById('minvalue').textContent = ''
-        aviso.textContent = 'digite o valor, escolha a moeda e clique no botão converter'
-        moedaSelecionada[0].checked = false
-        moedaSelecionada[1].checked = false
-        moedaSelecionada[2].checked = false
-        
+btnLimpar.addEventListener('click', function(){
+    valorDigitado.focus()
+    valorDigitado.value = ''
+    resultado.textContent = 'Resultado'
+    document.getElementById('title').textContent = '' 
+    document.getElementById('thisdate').textContent = ''
+    document.getElementById('maxvalue').textContent = ''
+    document.getElementById('minvalue').textContent = ''
+    aviso.textContent = 'Digite o valor, escolha a moeda e clique no botão converter'
+    moedaSelecionada[0].checked = false
+    moedaSelecionada[1].checked = false
+    moedaSelecionada[2].checked = false    
 })
 
 
