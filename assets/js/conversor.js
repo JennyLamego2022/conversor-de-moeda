@@ -6,7 +6,7 @@ const coins = 'USD-BRL,EUR-BRL,BTC-BRL'
 fetch(url+coins)
     .then(function(response){
          return response.json()
-})
+    })
 
     .then(function(data){
         console.log(data)
@@ -129,15 +129,12 @@ fetch(url+coins)
                     aviso.textContent = 'Resultado da conversão:'
             }
               isNaN(moedaConvertida) ? moedaConvertida = 0 : ''
-            // })
+           
         })   
-        });
-          
-    })     
+    });
+})     
 
-     
-      //formulario
-
+   
       let valorDigitado = document.querySelector('#valorEmReal')
       let moedaSelecionada = document.getElementsByName('moedaEstrangeira')
 
@@ -159,7 +156,7 @@ btnLimpar.addEventListener('click', function(){
     document.getElementById('thisdate').textContent = ''
     document.getElementById('maxvalue').textContent = ''
     document.getElementById('minvalue').textContent = ''
-    aviso.textContent = 'Digite o valor, escolha a moeda e clique no botão converter.'
+    aviso.textContent = 'Digite o valor e escolha a moeda.'
     moedaSelecionada[0].checked = false
     moedaSelecionada[1].checked = false
     moedaSelecionada[2].checked = false    

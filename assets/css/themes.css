@@ -278,6 +278,11 @@ textarea:focus, input:focus {
     border-bottom-left-radius: 0;
 }
 
+img{
+    color:red;
+   transform: scale(0.8);
+}
+
 div.form-group:nth-child(3), input label{
     display: flex;
     flex-direction: row;
