@@ -18,7 +18,7 @@ Consumir uma API Rest de conversão de moeda e juntamente adaptar a um design do
 <br>
 
 <div align="center">
-<img src = "https://user-images.githubusercontent.com/97410860/209726595-35db7342-ee6f-45ce-9bed-8b81dd936b66.jpg" width = "850px"/>
+<img src = "https://user-images.githubusercontent.com/97410860/209950216-51927f7c-f89e-486b-9656-9474937a4eb3.jpg" width = "850px"/>
 </div>
 
 <br>
