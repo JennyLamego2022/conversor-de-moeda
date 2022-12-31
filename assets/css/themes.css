@@ -259,9 +259,6 @@ h1 {
     margin-left: 0.5rem;
 }
 
-#valorEmReal {
-    /* margin: 20px; */
-}
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -307,6 +304,10 @@ div.form-group:nth-child(3), input label{
     justify-content: center;
     z-index: 10;
      
+}
+
+label{
+    cursor: pointer;
 }
 
 .moeda{
@@ -460,6 +461,12 @@ p {
        margin-right: 5rem;
     }
 
+    div.form-group:nth-child(1){
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;  
+    }
+
   
     #tela-principal{
         /* border: 1px solid red; */
@@ -467,7 +474,7 @@ p {
         margin-left: 140px;
         position: relative;
         width: 100%;
-        padding-left: 10rem;
+        /* padding-left: 10rem; */
         padding-top: 4rem;
        
     }
@@ -502,6 +509,7 @@ p {
         margin-top: 2rem;
     }
 
+    
     .resultado{
         border-bottom:var(--border-bottom-color);
     }
